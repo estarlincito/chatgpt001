@@ -11,7 +11,7 @@ const Box = styled.div`
   overflow: auto;
   padding: 1.25rem;
   display: grid;
-  align-content: center;
+  align-items: center;
   row-gap: 20px;
 `;
 
@@ -26,7 +26,7 @@ const Chat = () => {
 
   const initChat = {
     date: currentTimer(),
-    answer: `Hola, soy el hijo de <b>Estarlincito</b>, ¿en qué puedo ayudarte?`,
+    answer: `Hola, soy la hija de <b>Estarlincito</b>, ¿en qué puedo ayudarte?`,
   };
 
   //to scroll down
