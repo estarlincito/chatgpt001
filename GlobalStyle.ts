@@ -28,10 +28,10 @@ body {
 `;
 
 const Wrapper = styled.main`
-  min-height: 95vh; 
+  height: 100vh;
   display: grid;
-  justify-content: center;
   align-content: center;
+  justify-content: center;
 `;
 
 export { GlobalStyle, Wrapper };

@@ -1,25 +1,37 @@
+import { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
+import AppContext from "../context/AppContext";
+
+const FooterHTML = styled.footer`
+  font-size: 0.75rem;
+  color: var(--color1);
+  user-select: none;
+  text-align: center;
+  padding: 10px;
+
+  & a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color1);
+  }
+`;
 
 const Footer = () => {
-  const Footer = styled.footer`
-    font-size: 0.75rem;
-    color: var(--color1);
-    opacity: 0.4;
-    border-radius: 5px;
-    user-select: none;
-    text-align: center;
-    margin-top: 20px;
+  const { chats } = useContext(AppContext);
+  const footerRef = useRef<HTMLElement>(null);
 
-    & a {
-      text-decoration: none;
-      font-weight: bold;
-      color: var(--color1);
+  useEffect(() => {
+    if (footerRef.current) {
+      chats.length === 0
+        ? (footerRef.current.style.opacity = "1")
+        : (footerRef.current.style.opacity = "0.1");
     }
-  `;
+  }, [chats]);
+
   const date = new Date();
 
   return (
-    <Footer>
+    <FooterHTML ref={footerRef}>
       <p>
         &nbsp; Copyright © {date.getFullYear()}&nbsp;
         <a
@@ -31,7 +43,7 @@ const Footer = () => {
           Estarlincito
         </a>
       </p>
-    </Footer>
+    </FooterHTML>
   );
 };
 

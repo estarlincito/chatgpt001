@@ -1,57 +1,62 @@
 import Bot from "./Bot";
 import Human from "./Human";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
 import AppContext from "@/src/context/AppContext";
 import currentTimer from "../utils/currentTimer";
 
 //style
-const ChatHTML = styled.div`
+const Box = styled.div`
   background-color: var(--color6);
+  overflow: auto;
   padding: 1.25rem;
   display: grid;
-  align-items: center;
-  row-gap: 40px;
-  overflow-y: scroll;
+  align-content: center;
+  row-gap: 20px;
+`;
 
-  & h3 {
-    align-self: center;
-    justify-self: center;
-    user-select: none;
-  }
+const Container = styled.div`
+  display: grid;
+  row-gap: 1.25rem;
 `;
 
 const Chat = () => {
   const { chats } = useContext(AppContext);
-  const initDate = currentTimer();
-  const initAnswer = `Hello, I'm <b>Estarlincito's son</b>, how can I help you?`;
+  const boxRef = useRef<HTMLDivElement>(null);
+
+  const initChat = {
+    date: currentTimer(),
+    answer: `Hola, soy el hijo de <b>Estarlincito</b>, ¿en qué puedo ayudarte?`,
+  };
+
+  //to scroll down
+  useEffect(() => {
+    boxRef.current?.scrollTo({
+      top: boxRef.current?.scrollHeight,
+      behavior: "smooth",
+    });
+  }, [chats]);
 
   return (
-    <ChatHTML>
+    <Box ref={boxRef}>
       {chats.length === 0 ? (
-        <Bot date={initDate} answer={initAnswer} />
+        <Container>
+          <Bot date={initChat.date} answer={initChat.answer} />
+        </Container>
       ) : (
         <>
           {chats.map((chat) => (
-            <>
-              <Human
-                key={chat.id}
-                date={chat.human.date}
-                question={chat.human.question}
-              />
+            <Container key={chat.id}>
+              <Human date={chat.human.date} question={chat.human.question} />
 
               {chat.bot === undefined ? null : (
-                <Bot
-                  key={chat.id}
-                  date={chat.bot.date}
-                  answer={chat.bot.answer}
-                />
+                <Bot date={chat.bot.date} answer={chat.bot.answer} />
               )}
-            </>
+            </Container>
           ))}
         </>
       )}
-    </ChatHTML>
+    </Box>
   );
 };
 

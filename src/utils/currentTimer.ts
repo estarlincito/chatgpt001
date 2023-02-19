@@ -1,10 +1,9 @@
 const currentTimer = () => {
   const date = new Date();
-  const day = date.getDay();
-  const month = date.getMonth();
-  const year = date.getFullYear();
+  const hour = date.getHours();
+  const minute = date.getMinutes();
 
-  return `${day}/${month}/${year}`;
+  return `${hour}:${minute}`;
 };
 
 export default currentTimer;

@@ -7,7 +7,7 @@ import Chat from "./Chat";
 const ChatgptDiv = styled.div`
   background-color: var(--color3);
   color: var(--color1);
-  height: 600px;
+  height: 80vh;
   width: 380px;
   border-radius: 10px;
   display: grid;

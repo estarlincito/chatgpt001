@@ -1,25 +1,25 @@
 import styled from "styled-components";
 import { humanTp } from "../types/contextTp";
 
-const Human = ({ date, question }: humanTp) => {
-  const HumanHTML = styled.div`
-    text-align: right;
-    & p {
-      background-color: var(--color4);
-      padding: 20px;
-      border-radius: 20px 0px 20px 0px;
-      color: var(--color1);
-    }
+const HumanHTML = styled.div`
+  background-color: var(--color4);
+  border-radius: 10px 0px 10px 0px;
+  color: var(--color1);
+  display: grid;
+  justify-self: end;
+  padding: 10px;
+  text-align: right;
 
-    & span {
-      padding: 20px;
-      font-size: 0.7em;
-    }
-  `;
+  & span {
+    font-size: 0.5em;
+  }
+`;
+
+const Human = ({ date, question }: humanTp) => {
   return (
     <HumanHTML>
-      <span>{date}</span>
       <p>{question}</p>
+      <span>{date}</span>
     </HumanHTML>
   );
 };

@@ -5,7 +5,13 @@ const HomePage = () => {
   return (
     <>
       <Head>
-        <title>chatGPT001</title>
+        <link
+          rel="shortcut icon"
+          href="https://github.com/estarlincito/chatgpt001/blob/main/src/assets/favicon.svg"
+        />
+        <meta name="title" content="CHATGPT001"></meta>
+        <meta name="description" content="Estarlincito IA"></meta>
+        <title>CHATGPT001</title>
       </Head>
 
       <ChatGPT001 />
