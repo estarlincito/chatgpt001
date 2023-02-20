@@ -4,6 +4,7 @@ import { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
 import AppContext from "@/src/context/AppContext";
 import currentTimer from "../utils/currentTimer";
+import Loadding from "./Loadding";
 
 //style
 const Box = styled.div`
@@ -49,7 +50,9 @@ const Chat = () => {
             <Container key={chat.id}>
               <Human date={chat.human.date} question={chat.human.question} />
 
-              {chat.bot === undefined ? null : (
+              {chat.bot === undefined ? (
+                <Loadding />
+              ) : (
                 <Bot date={chat.bot.date} answer={chat.bot.answer} />
               )}
             </Container>

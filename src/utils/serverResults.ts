@@ -9,7 +9,7 @@ const serverResults = async (input: string) => {
       model: "text-davinci-003",
       prompt: JSON.stringify(input),
       temperature: 0.9,
-      max_tokens: 4000,
+      max_tokens: 1500,
       top_p: 1,
       frequency_penalty: 0.0,
       presence_penalty: 0.6,

@@ -79,7 +79,7 @@ const Form = () => {
         required
         autoFocus
         placeholder="Escribe aquí"
-        maxLength={4000}
+        maxLength={500}
         value={input}
         onChange={handleChange}
       />
