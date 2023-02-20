@@ -6,12 +6,14 @@ const BotHTML = styled.div`
   border-radius: 0px 10px 0px 10px;
   color: var(--color1);
   display: grid;
+  max-width: 310px;
   justify-self: start;
   padding: 10px;
 
   & span {
     font-size: 0.5em;
     justify-self: end;
+    user-select: none;
   }
 `;
 

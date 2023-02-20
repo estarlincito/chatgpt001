@@ -60,7 +60,7 @@ const Form = () => {
       //Save  Bot and Human data in history
       const data = await serverResults(input);
       const answer =
-        data.choices[0].text === undefined ? ");" : data.choices[0].text;
+        data.choices === undefined ? "Sorry );" : data.choices[0].text;
 
       setChats([
         ...chats,
