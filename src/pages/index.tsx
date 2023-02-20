@@ -10,7 +10,7 @@ const HomePage = () => {
           href="https://github.com/estarlincito/chatgpt001/blob/main/src/assets/favicon.ico"
         />
         <meta name="title" content="CHATGPT001"></meta>
-        <meta name="description" content="Estarlincito IA"></meta>
+        <meta name="description" content="Estarlincito AI"></meta>
         <title>CHATGPT001</title>
       </Head>
 

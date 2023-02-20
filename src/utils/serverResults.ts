@@ -1,8 +1,8 @@
-const serverResults = async (input: string) => {
+const serverResults = async (input: string, key: number) => {
   const res = await fetch("https://api.openai.com/v1/completions", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY}`,
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY}${key}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({

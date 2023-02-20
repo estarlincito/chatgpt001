@@ -58,7 +58,8 @@ const Form = () => {
 
     (async () => {
       //Save  Bot and Human data in history
-      const data = await serverResults(input);
+      const key = Math.floor(Math.random() * [0, 1, 2].length);
+      const data = await serverResults(input, key);
       const answer =
         data.choices === undefined ? "Sorry );" : data.choices[0].text;
 
