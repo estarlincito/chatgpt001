@@ -7,7 +7,7 @@ const HomePage = () => {
       <Head>
         <link
           rel="shortcut icon"
-          href="https://github.com/estarlincito/chatgpt001/blob/main/src/assets/favicon.ico"
+          href="https://raw.githubusercontent.com/estarlincito/chatgpt001/main/src/assets/favicon.ico"
         />
         <meta name="title" content="CHATGPT001"></meta>
         <meta name="description" content="Estarlincito AI"></meta>
