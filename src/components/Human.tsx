@@ -6,14 +6,15 @@ const HumanHTML = styled.div`
   border-radius: 10px 0px 10px 0px;
   color: var(--color1);
   display: grid;
-  max-width: 310px;
+  max-width: 290px;
   justify-self: end;
   padding: 10px;
-  text-align: right;
+
 
   & span {
     font-size: 0.5em;
     user-select: none;
+    text-align: right;
   }
 `;
 
