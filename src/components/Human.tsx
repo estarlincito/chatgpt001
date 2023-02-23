@@ -6,7 +6,7 @@ const HumanHTML = styled.div`
   border-radius: 10px 0px 10px 0px;
   color: var(--color1);
   display: grid;
-  max-width: 290px;
+  max-width: 85%;
   justify-self: end;
   padding: 10px;
 

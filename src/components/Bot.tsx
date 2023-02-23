@@ -6,7 +6,7 @@ const BotHTML = styled.div`
   border-radius: 0px 10px 0px 10px;
   color: var(--color1);
   display: grid;
-  max-width: 290px;
+  max-width: 85%;
   justify-self: start;
   padding: 10px;
 
