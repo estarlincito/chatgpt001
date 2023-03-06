@@ -7,3 +7,5 @@ been fine-tuned (an approach to transfer learning) using both
 supervised and reinforcement learning techniques.
 
 ### app link: [chatgpt001.vercel.app](https://chatgpt001.vercel.app)
+
+<!-- serve -s ./out -p 8000 -->

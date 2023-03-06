@@ -8,7 +8,13 @@ type props = {
 
 const ContextProvider = ({ children }: props) => {
   const [chats, setChats] = useState<chatsTp[]>([]);
+  const [menu, setMenu] = useState(false);
   const appRender = useRef(0);
+
+  //off menu
+  const handleFalse = () => {
+    menu === true ? setMenu(false) : null;
+  };
 
   //if chats change, save to local storage
   useEffect(() => {
@@ -30,6 +36,9 @@ const ContextProvider = ({ children }: props) => {
       value={{
         chats,
         setChats,
+        menu,
+        setMenu,
+        handleFalse,
       }}
     >
       {children}

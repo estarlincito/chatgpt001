@@ -1,16 +1,13 @@
 import type { AppProps } from "next/app";
 import ContextProvider from "../context/ContextProvider";
-import { GlobalStyle, Wrapper } from "@/GlobalStyle";
-import Footer from "../components/Footer";
+import "../globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ContextProvider>
-      <GlobalStyle />
-      <Wrapper>
+      <main className="bg-quinary grid items-center justify-center h-screen">
         <Component {...pageProps} />
-        <Footer />
-      </Wrapper>
+      </main>
     </ContextProvider>
   );
 }

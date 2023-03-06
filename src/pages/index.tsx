@@ -6,10 +6,15 @@ const HomePage = () => {
     <>
       <Head>
         <meta name="title" content="CHATGPT001" />
-        <meta name="description" content="Estarlincito AI" />
+        <meta
+          name="description"
+          content="CHATGPT001 es un motor de conversación en línea basado en machine
+        learning para que los usuarios puedan tener interacciones realistas y
+        naturales con un bot."
+        />
         <link
           rel="shortcut icon"
-          href="https://raw.githubusercontent.com/estarlincito/chatgpt001/main/src/assets/favicon.ico"
+          href="https://raw.githubusercontent.com/estarlincito/chatgpt001/main/src/assets/favicon.png"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="chatgpt001.vercel.app" />

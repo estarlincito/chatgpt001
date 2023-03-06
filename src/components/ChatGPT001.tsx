@@ -1,27 +1,14 @@
-import styled from "styled-components";
 import Form from "./Form";
-import Header from "./Header";
+import Header from "./navbar/Header";
 import Chat from "./Chat";
 
-//Style
-const ChatgptDiv = styled.div`
-  background-color: var(--color3);
-  color: var(--color1);
-  height: 80vh;
-  width: 380px;
-  border-radius: 10px;
-  display: grid;
-  grid-template-rows: 60px auto 60px;
-`;
-
-//JSX
 const ChatGPT001 = () => {
   return (
-    <ChatgptDiv>
+    <div className="w-96 h-screen80 p-3 duration-500">
       <Header />
       <Chat />
       <Form />
-    </ChatgptDiv>
+    </div>
   );
 };
 

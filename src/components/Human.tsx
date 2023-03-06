@@ -1,29 +1,13 @@
-import styled from "styled-components";
 import { humanTp } from "../types/contextTp";
-
-const HumanHTML = styled.div`
-  background-color: var(--color4);
-  border-radius: 10px 0px 10px 0px;
-  color: var(--color1);
-  display: grid;
-  max-width: 85%;
-  justify-self: end;
-  padding: 10px;
-
-
-  & span {
-    font-size: 0.5em;
-    user-select: none;
-    text-align: right;
-  }
-`;
 
 const Human = ({ date, question }: humanTp) => {
   return (
-    <HumanHTML>
+    <div className="bg-quaternary text-primary p-2 r rounded-tl-lg rounded-br-lg justify-self-end grid w-10/12">
       <p>{question}</p>
-      <span>{date}</span>
-    </HumanHTML>
+      <span className="font-lg text-xs justify-self-end select-none">
+        {date}
+      </span>
+    </div>
   );
 };
 

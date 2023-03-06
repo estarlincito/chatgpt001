@@ -1,29 +1,14 @@
 import Bot from "./Bot";
 import Human from "./Human";
 import { useContext, useEffect, useRef } from "react";
-import styled from "styled-components";
 import AppContext from "@/src/context/AppContext";
 import currentTimer from "../utils/currentTimer";
 import Loadding from "./Loadding";
 
-//style
-const Box = styled.div`
-  background-color: var(--color6);
-  overflow: auto;
-  padding: 1.25rem;
-  display: grid;
-  align-items: center;
-  row-gap: 20px;
-`;
-
-const Container = styled.div`
-  display: grid;
-  row-gap: 1.25rem;
-`;
-
 const Chat = () => {
   const { chats } = useContext(AppContext);
   const boxRef = useRef<HTMLDivElement>(null);
+  const { handleFalse } = useContext(AppContext);
 
   const initChat = {
     date: currentTimer(),
@@ -39,15 +24,19 @@ const Chat = () => {
   }, [chats]);
 
   return (
-    <Box ref={boxRef}>
+    <div
+      onClick={handleFalse}
+      ref={boxRef}
+      className="bg-slate-50 h-4/5 p-5 grid items-center gap-y-5 overflow-auto"
+    >
       {chats.length === 0 ? (
-        <Container>
+        <div className="grid gap-y-5">
           <Bot date={initChat.date} answer={initChat.answer} />
-        </Container>
+        </div>
       ) : (
         <>
           {chats.map((chat) => (
-            <Container key={chat.id}>
+            <div className="grid gap-y-5" key={chat.id}>
               <Human date={chat.human.date} question={chat.human.question} />
 
               {chat.bot === undefined ? (
@@ -55,11 +44,11 @@ const Chat = () => {
               ) : (
                 <Bot date={chat.bot.date} answer={chat.bot.answer} />
               )}
-            </Container>
+            </div>
           ))}
         </>
       )}
-    </Box>
+    </div>
   );
 };
 

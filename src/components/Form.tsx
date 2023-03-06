@@ -1,44 +1,13 @@
 import { ChangeEvent, FormEvent, useContext, useState } from "react";
-import styled from "styled-components";
 import AppContext from "@/src/context/AppContext";
 import currentTimer from "@/src/utils/currentTimer";
 import { serverResults } from "@/src/utils/serverResults";
 import { IoChevronForwardCircleSharp } from "react-icons/io5";
 
-//Style
-const FormHTML = styled.form`
-  background-color: var(--color6);
-  display: grid;
-  grid-template-columns: auto 45px;
-  border-radius: 0px 0px 10px 10px;
-  border-top: 1px solid var(--color2);
-
-  & input {
-    font-weight: lighter;
-    border: none;
-    outline: unset;
-    padding: 10px 20px 10px 25px;
-    border-radius: 0px 0px 0px 10px;
-    font-size: 1em;
-  }
-
-  & button {
-    all: unset;
-    background-color: var(--color6);
-    color: var(--color1);
-    border-radius: 0px 0px 10px 0px;
-    padding-top: 8px;
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    user-select: none;
-    cursor: pointer;
-  }
-`;
-
 const Form = () => {
   const { chats, setChats } = useContext(AppContext);
   const [input, setInput] = useState("");
+  const { handleFalse } = useContext(AppContext);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
@@ -74,7 +43,11 @@ const Form = () => {
   };
 
   return (
-    <FormHTML onSubmit={handleSubmit}>
+    <form
+      onClick={handleFalse}
+      onSubmit={handleSubmit}
+      className="bg-slate-50 border-solid border-t border-t-secondary rounded-b-lg grid grid-cols-8 pb-1"
+    >
       <input
         required
         autoFocus
@@ -82,16 +55,17 @@ const Form = () => {
         maxLength={500}
         value={input}
         onChange={handleChange}
+        className="bg-slate-50 font-light border-none outline-none py-3 pl-5 pr-6 rounded-bl-lg text-base col-span-7"
       />
 
       {input === "" ? (
         <span />
       ) : (
-        <button>
+        <button className="text-primary pt-2 font-bold text-xl border-none select-none cursor-pointer col-span-1">
           <IoChevronForwardCircleSharp />
         </button>
       )}
-    </FormHTML>
+    </form>
   );
 };
 
