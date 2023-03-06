@@ -10,9 +10,6 @@ module.exports = {
         quaternary: "#cacfd6",
         quinary: "#d6e5e3",
       },
-      height: {
-        screen80: "80vh",
-      },
     },
   },
   plugins: [],
