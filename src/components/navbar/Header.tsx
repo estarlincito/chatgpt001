@@ -17,11 +17,11 @@ const Header = () => {
     <div className="relative grid grid-cols-9 items-center p-4 bg-primary text-slate-50 rounded-t-lg select-none">
       <button className="col-start-1" onClick={handleClick}>
         {menu === false ? (
-          <i className="text-slate-50 text-lg font-bold hover:text-slate-300 duration-500 active:text-slate-600">
+          <i className="text-slate-50 duration-500 text-lg font-bold hover:text-slate-300 active:text-slate-600">
             <AiOutlineMenu />
           </i>
         ) : (
-          <i className="text-slate-50 text-lg font-bold hover:text-slate-300 duration-500 active:text-slate-600">
+          <i className="text-slate-50 duration-500 text-lg font-bold hover:text-slate-300 active:text-slate-600">
             <AiOutlineClose />
           </i>
         )}
