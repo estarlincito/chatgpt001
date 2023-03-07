@@ -3,7 +3,7 @@ const currentTimer = () => {
   const hour = date.getHours();
   const minute = date.getMinutes();
 
-  return `${hour}:${minute}`;
+  return `${hour <= 9 ? "0" : ""}${hour}:${minute <= 9 ? "0" : ""}${minute}`;
 };
 
-export default currentTimer;
+export { currentTimer };

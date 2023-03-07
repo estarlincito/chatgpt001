@@ -2,13 +2,24 @@ import React, { useContext, useState } from "react";
 import Footer from "./Footer";
 import { AiOutlineCheckCircle, AiTwotoneDelete } from "react-icons/ai";
 import AppContext from "@/src/context/AppContext";
+import { currentTimer } from "@/src/utils/currentTimer";
 
 const Collapse = () => {
   const { chats, setChats } = useContext(AppContext);
   const [alert, setAlert] = useState(false);
 
   const handleClick = () => {
-    setChats([]);
+    const initialValue = [
+      {
+        id: 0,
+        bot: {
+          date: currentTimer(),
+          answer: `Hola, soy la hija de <b>Estarlincito</b>, ¿en qué puedo ayudarte?`,
+        },
+      },
+    ];
+
+    setChats(initialValue);
     setAlert(true);
     setTimeout(() => {
       setAlert(false);
@@ -24,7 +35,7 @@ const Collapse = () => {
       </p>
 
       <div className="row-span-2 border-solid border-t pt-5 border-t-secondary rounded-b-lg">
-        {chats.length !== 0 ? (
+        {chats.length > 1 ? (
           <button
             onClick={handleClick}
             className="row-span-2 bg-red-400 h-12 w-40 p-2 rounded-lg text-slate-50 flex justify-start items-center gap-2 hover:bg-red-500 active:bg-red-900 duration-500"

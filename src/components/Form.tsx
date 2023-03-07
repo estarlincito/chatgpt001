@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useContext, useState } from "react";
 import AppContext from "@/src/context/AppContext";
-import currentTimer from "@/src/utils/currentTimer";
+import { currentTimer } from "@/src/utils/currentTimer";
 import { serverResults } from "@/src/utils/serverResults";
 import { IoChevronForwardCircleSharp } from "react-icons/io5";
 

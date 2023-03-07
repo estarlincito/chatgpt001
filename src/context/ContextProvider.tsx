@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { chatsTp } from "../types/contextTp";
+import { currentTimer } from "../utils/currentTimer";
 import AppContext from "./AppContext";
 
 type props = {
@@ -27,8 +28,20 @@ const ContextProvider = ({ children }: props) => {
 
   //whent app start
   useEffect(() => {
-    const chatsLs = localStorage.getItem("chats") || JSON.stringify([]);
+    const initialValue = [
+      {
+        id: 0,
+        bot: {
+          date: currentTimer(),
+          answer: `Hola, soy la hija de <b>Estarlincito</b>, ¿en qué puedo ayudarte?`,
+        },
+      },
+    ];
+
+    const chatsLs =
+      localStorage.getItem("chats") || JSON.stringify(initialValue);
     setChats(JSON.parse(chatsLs));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

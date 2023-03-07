@@ -2,11 +2,9 @@ import { humanTp } from "../types/contextTp";
 
 const Human = ({ date, question }: humanTp) => {
   return (
-    <div className="bg-quaternary text-primary p-2 r rounded-tl-lg rounded-br-lg justify-self-end grid max-w-[85%] duration-500">
+    <div className="bg-quaternary text-primary p-2 rounded-tl-lg rounded-br-lg justify-self-end grid max-w-[85%] duration-500">
       <p>{question}</p>
-      <span className="font-lg text-xs justify-self-end select-none">
-        {date}
-      </span>
+      <span className="text-[0.6rem] opacity-70 justify-self-end select-none">{date}</span>
     </div>
   );
 };

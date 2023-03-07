@@ -3,7 +3,7 @@ type botTp = { date: string; answer: string };
 
 type chatsTp = {
   id: number;
-  human: humanTp;
+  human?: humanTp;
   bot?: botTp;
 };
 
