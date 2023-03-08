@@ -59,7 +59,7 @@ const Form = () => {
       />
 
       {input === "" ? (
-        <span />
+        <span className="select-none" />
       ) : (
         <button className="text-primary pt-2 font-bold text-xl border-none select-none cursor-pointer col-span-1">
           <IoChevronForwardCircleSharp />
