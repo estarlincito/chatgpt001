@@ -10,12 +10,12 @@ type props = {
 
 const ContextProvider = ({ children }: props) => {
   const [chats, setChats] = useState<Chats[]>([]);
-  const [menu, setMenu] = useState(false);
+  const [collapse, setCollapse] = useState(false);
   const appRender = useRef(0);
 
-  //off menu
+  //off collapse
   const handleFalse = () => {
-    menu === true ? setMenu(false) : null;
+    collapse === true ? setCollapse(false) : null;
   };
 
   //if chats change, save to local storage
@@ -43,8 +43,8 @@ const ContextProvider = ({ children }: props) => {
       value={{
         chats,
         setChats,
-        menu,
-        setMenu,
+        collapse,
+        setCollapse,
         handleFalse,
       }}
     >

@@ -5,16 +5,16 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { GiRobotHelmet } from "react-icons/gi";
 
 const MenuAction = () => {
-  const { menu, setMenu, handleFalse } = useAppContext();
+  const { collapse, setCollapse, handleFalse } = useAppContext();
   const handleClick = () => {
-    const statu = menu === false ? true : false;
-    setMenu(statu);
+    const statu = collapse === false ? true : false;
+    setCollapse(statu);
   };
 
   return (
     <>
       <button className="col-start-1" onClick={handleClick}>
-        {menu === false ? (
+        {collapse === false ? (
           <i className="text-slate-50 duration-500 text-lg font-bold hover:text-slate-300 active:text-slate-600">
             <AiOutlineMenu />
           </i>

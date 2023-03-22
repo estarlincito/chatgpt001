@@ -5,8 +5,8 @@ type Constext = {
   chats: Chats[];
   setChats: (chats: Chats[]) => void;
 
-  menu: boolean;
-  setMenu: (menu: boolean) => void;
+  collapse: boolean;
+  setCollapse: (collapse: boolean) => void;
   handleFalse: () => void;
 };
 

@@ -6,7 +6,7 @@ import { useAppContext } from "@/context";
 import { initialValue } from "@/utils";
 
 const Collapse = () => {
-  const { menu, chats, setChats } = useAppContext();
+  const { collapse, chats, setChats } = useAppContext();
   const [alert, setAlert] = useState(false);
 
   const handleClick = () => {
@@ -19,7 +19,7 @@ const Collapse = () => {
 
   return (
     <>
-      {menu === true ? (
+      {collapse === true ? (
         <div className="col-start-1 z-40">
           <div className="grid grid-rows-4 h-96 w-4/5 mt-4 p-4 absolute  bg-primary left-0 rounded-br-lg">
             <p className="row-span-2">
