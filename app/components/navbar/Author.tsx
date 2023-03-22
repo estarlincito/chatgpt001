@@ -1,4 +1,4 @@
-const Footer = () => {
+const Author = () => {
   const date = new Date();
   const currentgeYear = date.getFullYear();
   const buildYear = 2023;
@@ -22,4 +22,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Author;

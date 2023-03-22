@@ -1,6 +1,7 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
-import { chatsTp } from "../types/contextTp";
-import { currentTimer } from "../utils/currentTimer";
+import { Chats } from "@/app/types";
+import { initialValue } from "@/app/utils";
 import AppContext from "./AppContext";
 
 type props = {
@@ -8,7 +9,7 @@ type props = {
 };
 
 const ContextProvider = ({ children }: props) => {
-  const [chats, setChats] = useState<chatsTp[]>([]);
+  const [chats, setChats] = useState<Chats[]>([]);
   const [menu, setMenu] = useState(false);
   const appRender = useRef(0);
 
@@ -28,20 +29,13 @@ const ContextProvider = ({ children }: props) => {
 
   //whent app start
   useEffect(() => {
-    const initialValue = [
-      {
-        id: 0,
-        bot: {
-          date: currentTimer(),
-          answer: `Hola, soy la hija de <b>Estarlincito</b>, ¿en qué puedo ayudarte?`,
-        },
-      },
-    ];
+    const lsChats = localStorage.getItem("chats");
 
-    const chatsLs =
-      localStorage.getItem("chats") || JSON.stringify(initialValue);
-    setChats(JSON.parse(chatsLs));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (lsChats === null) {
+      setChats(initialValue);
+    } else {
+      setChats(JSON.parse(lsChats));
+    }
   }, []);
 
   return (

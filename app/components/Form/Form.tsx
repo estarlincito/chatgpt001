@@ -1,13 +1,12 @@
-import { ChangeEvent, FormEvent, useContext, useState } from "react";
-import AppContext from "@/src/context/AppContext";
-import { currentTimer } from "@/src/utils/currentTimer";
-import { serverResults } from "@/src/utils/serverResults";
+"use client";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { currentTimer } from "@/app/utils/currentTimer";
 import { IoChevronForwardCircleSharp } from "react-icons/io5";
+import { useAppContext } from "@/app/context";
 
 const Form = () => {
-  const { chats, setChats } = useContext(AppContext);
+  const { chats, setChats, handleFalse } = useAppContext();
   const [input, setInput] = useState("");
-  const { handleFalse } = useContext(AppContext);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
@@ -26,11 +25,16 @@ const Form = () => {
     setInput("");
 
     (async () => {
-      //Save  Bot and Human data in history
-      const data = await serverResults(input);
-      const answer =
-        data.choices === undefined ? "Sorry );" : data.choices[0].text;
+      const res = await fetch("https://chatgpt001.vercel.app/api", {
+        method: "POST",
+        body: JSON.stringify({
+          input,
+        }),
+      });
 
+      const { answer } = await res.json();
+
+      //Save  Bot and Human data in history
       setChats([
         ...chats,
         {
