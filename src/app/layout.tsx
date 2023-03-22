@@ -1,6 +1,8 @@
-import ContextProvider from "./context/ContextProvider";
-import "./styles/globals.css";
+import "@/styles/globals.css";
+import { ContextProvider } from "@/context";
+
 export const metadata = {
+  title: "CHATGPT001",
   openGraph: {
     title: "CHATGPT001",
     siteName: "CHATGPT001",

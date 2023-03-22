@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Chats } from "@/app/types";
-import { initialValue } from "@/app/utils";
+import { Chats } from "@/types";
+import { initialValue } from "@/utils";
 import AppContext from "./AppContext";
 
 type props = {

@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { Chats } from "../types";
+import { Chats } from "@/types";
 
 type Constext = {
   chats: Chats[];

@@ -1,4 +1,4 @@
-import { Human } from "@/app/types";
+import { Human } from "@/types";
 
 const HumanQuestion = ({ date, question }: Human) => {
   return (

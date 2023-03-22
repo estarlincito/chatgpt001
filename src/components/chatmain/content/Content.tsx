@@ -2,7 +2,7 @@
 import BotAnswer from "./BotAnswer";
 import HumanQuestion from "./HumanQuestion";
 import Loadding from "./Loadding";
-import { useAppContext } from "@/app/context";
+import { useAppContext } from "@/context";
 
 const Content = () => {
   const { chats } = useAppContext();

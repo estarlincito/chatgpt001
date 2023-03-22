@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import Author from "./Author";
 import { AiOutlineCheckCircle, AiTwotoneDelete } from "react-icons/ai";
-import { useAppContext } from "@/app/context";
-import { initialValue } from "@/app/utils";
+import { useAppContext } from "@/context";
+import { initialValue } from "@/utils";
 
 const Collapse = () => {
   const { menu, chats, setChats } = useAppContext();

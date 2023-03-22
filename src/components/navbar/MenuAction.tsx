@@ -1,5 +1,5 @@
 "use client";
-import { useAppContext } from "@/app/context";
+import { useAppContext } from "@/context";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { GiRobotHelmet } from "react-icons/gi";

@@ -1,4 +1,4 @@
-import { Bot } from "@/app/types";
+import { Bot } from "@/types";
 
 const BotAnswer = ({ date, answer }: Bot) => {
   return (

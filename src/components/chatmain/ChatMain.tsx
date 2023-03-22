@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { useAppContext } from "@/app/context";
+import { useAppContext } from "@/context";
 import Content from "./content";
 
-const Chatmain = () => {
+const ChatMain = () => {
   const { chats, handleFalse } = useAppContext();
   const boxRef = useRef<HTMLDivElement>(null);
 
@@ -26,4 +26,4 @@ const Chatmain = () => {
   );
 };
 
-export default Chatmain;
+export default ChatMain;
