@@ -20,10 +20,9 @@ const MainChat = () => {
     <div
       onClick={handleFalse}
       ref={devRef}
-      className={`bg-primary p-5 h-[82%] overflow-auto ${
-        collapse === true ? "opacity-60" : ""
-      }`}
+      className="bg-primary p-5 h-[82%] overflow-auto"
     >
+      ${collapse === true ? <div>test</div> : ""}`
       {chats.map((chat) => (
         <div key={chat.id} className="grid items-center">
           {chat.human === undefined ? null : (
