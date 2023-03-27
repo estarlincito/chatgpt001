@@ -10,6 +10,8 @@ type props = {
 
 const ContextProvider = ({ children }: props) => {
   const [chats, setChats] = useState<Chats[]>([]);
+  const [question, setQuestion] = useState("");
+  const [alert, setAlert] = useState(false);
   const [collapse, setCollapse] = useState(false);
   const appRender = useRef(0);
 
@@ -43,8 +45,12 @@ const ContextProvider = ({ children }: props) => {
       value={{
         chats,
         setChats,
+        question,
+        setQuestion,
         collapse,
         setCollapse,
+        alert,
+        setAlert,
         handleFalse,
       }}
     >

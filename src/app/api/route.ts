@@ -2,7 +2,19 @@ import { NextResponse } from "next/server";
 import { botAnswer } from "@/utils";
 
 export async function POST(request: Request) {
-  const req = await request.json();
-  const res = await botAnswer(req.question);
-  return NextResponse.json(res);
+  const { question } = await request.json();
+  const answer = await botAnswer(question);
+  return NextResponse.json(answer);
+}
+
+export async function GET() {
+  return NextResponse.json({ get: null });
+}
+
+export async function PUT() {
+  return NextResponse.json({ put: null });
+}
+
+export async function DELETE() {
+  return NextResponse.json({ delete: null });
 }

@@ -1,4 +1,4 @@
-const Loadding = () => {
+const ChatCardLoadding = () => {
   return (
     <div className="loadding">
       <span></span>
@@ -8,4 +8,4 @@ const Loadding = () => {
   );
 };
 
-export default Loadding;
+export default ChatCardLoadding;

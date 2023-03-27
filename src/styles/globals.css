@@ -5,7 +5,7 @@
 /* Loadding */
 @layer base {
   .loadding {
-    @apply bg-secondary;
+    @apply bg-secondary mb-5;
     border-radius: 0px 10px 0px 10px;
     max-width: 310px;
     justify-self: start;

@@ -8,4 +8,4 @@ supervised and reinforcement learning techniques.
 
 ### app link: [chatgpt001.vercel.app](https://chatgpt001.vercel.app)
 
-<!-- serve -s ./out -p 8000 -->
+<!-- handleFalse on nav | buscar la forma de apagarlo desde el servidor mirar el video de fazt sobre ejecutar codigo del servidor en el cliente (next 13) -->

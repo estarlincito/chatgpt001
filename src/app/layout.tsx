@@ -30,11 +30,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ContextProvider>
       <html lang="es">
-        <body>
-          <main className="bg-quinary grid items-center justify-center h-screen">
-            {children}
-          </main>
-        </body>
+        <body className="bg-secondary">{children}</body>
       </html>
     </ContextProvider>
   );
