@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 const MainChat = () => {
   const { chats, collapse, handleFalse } = useAppContext();
   const devRef = useRef<HTMLDivElement>(null);
+  console.log(collapse);
 
   //to scroll down
   useEffect(() => {
