@@ -4,7 +4,7 @@ import { ChatCard, ChatCardLoadding } from "@UI/molecules";
 import { useEffect, useRef } from "react";
 
 const MainChat = () => {
-  const { chats } = useAppContext();
+  const { chats, collapse, handleFalse } = useAppContext();
   const devRef = useRef<HTMLDivElement>(null);
 
   //to scroll down
@@ -17,7 +17,7 @@ const MainChat = () => {
 
   return (
     <div
-      // onClick={handleFalse}
+      onClick={handleFalse}
       //${collapse === true ? "opacity-60" : null}
       ref={devRef}
       className={`bg-primary p-5 h-[82%] overflow-auto`}
