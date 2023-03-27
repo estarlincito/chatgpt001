@@ -1,27 +1,26 @@
 "use client";
 import { useAppContext } from "@/context";
 import { ChatCard, ChatCardLoadding } from "@UI/molecules";
-// import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const MainChat = () => {
-  const { chats, collapse, handleFalse } = useAppContext();
-  // const devRef = useRef<HTMLDivElement>(null);
+  const { chats } = useAppContext();
+  const devRef = useRef<HTMLDivElement>(null);
 
   //to scroll down
-  // useEffect(() => {
-  //   devRef.current?.scrollTo({
-  //     top: devRef.current?.scrollHeight,
-  //     behavior: "smooth",
-  //   });
-  // }, [chats]);
+  useEffect(() => {
+    devRef.current?.scrollTo({
+      top: devRef.current?.scrollHeight,
+      behavior: "smooth",
+    });
+  }, [chats]);
 
   return (
     <div
-      onClick={handleFalse}
-      // ref={devRef}
-      className={`bg-primary p-5 h-[82%] overflow-auto ${
-        collapse === true ? "opacity-60" : null
-      }`}
+      // onClick={handleFalse}
+      //${collapse === true ? "opacity-60" : null}
+      ref={devRef}
+      className={`bg-primary p-5 h-[82%] overflow-auto`}
     >
       {chats.map((chat) => (
         <div key={chat.id} className="grid items-center">
