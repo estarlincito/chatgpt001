@@ -20,9 +20,9 @@ export const metadata = {
   },
 
   icons: {
-    icon: "https://raw.githubusercontent.com/estarlincito/chatgpt001/main/app/assets/favicon.png",
+    icon: "https://raw.githubusercontent.com/estarlincito/chatgpt001/main/src/assets/favicon.ico",
     shortcut:
-      "https://raw.githubusercontent.com/estarlincito/chatgpt001/main/app/assets/favicon.png",
+      "https://raw.githubusercontent.com/estarlincito/chatgpt001/main/src/assets/favicon.png",
   },
 };
 
