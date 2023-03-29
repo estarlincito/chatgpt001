@@ -6,7 +6,7 @@ export const useToggle = () => {
   try {
     const { alert, setAlert, collapse, setCollapse } = useContext(AppContext);
 
-    const toggleAlrt = () => {
+    const toggleAlert = () => {
       setAlert(!alert);
     };
 
@@ -14,7 +14,7 @@ export const useToggle = () => {
       setCollapse(!collapse);
     };
 
-    return { alert, toggleAlrt, collapse, toggleCollapse };
+    return { alert, toggleAlert, collapse, toggleCollapse };
   } catch (error) {
     throw new Error("useChat must be used within a ChatContext");
   }
