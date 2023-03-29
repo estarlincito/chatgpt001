@@ -1,5 +1,5 @@
+import { AppProvider } from "@/context";
 import "@/styles/globals.css";
-import { ContextProvider } from "@/context";
 
 export const metadata = {
   title: "CHATGPT001",
@@ -28,11 +28,11 @@ export const metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ContextProvider>
-      <html lang="es">
+    <html lang="es">
+      <AppProvider>
         <body className="bg-secondary">{children}</body>
-      </html>
-    </ContextProvider>
+      </AppProvider>
+    </html>
   );
 };
 

@@ -1,6 +1,6 @@
 import { currentTimer } from "./currentTimer";
 
-export const initialValue = [
+export const initialChat = [
   {
     id: 0,
     bot: {

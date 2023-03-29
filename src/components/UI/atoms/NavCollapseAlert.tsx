@@ -1,14 +1,15 @@
-import { useAppContext } from "@/context";
+"use client";
+import { useToggle } from "@/Hooks";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
 const NavCollapseAlert = () => {
-  const { alert } = useAppContext();
+  const { alert } = useToggle();
 
   return (
     <>
       {alert === true ? (
-        <div className="text-center p-5 rounded-lg">
-          <p className="duration-500 text-lg">Historial eliminado</p>
+        <div className="p-5 text-center rounded-lg">
+          <p className="text-lg duration-500">Historial eliminado</p>
           <i className="flex justify-center text-3xl">
             <AiOutlineCheckCircle />
           </i>

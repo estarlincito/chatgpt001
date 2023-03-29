@@ -11,3 +11,11 @@ supervised and reinforcement learning techniques.
 <!-- handleFalse on nav | buscar la forma de apagarlo desde el servidor mirar el video de fazt sobre ejecutar codigo del servidor en el cliente (next 13) -->
 
 <!-- trabajar en openGraph -->
+
+<!-- //  // const handleClick = () => {
+//   setChat(initialChat);
+//   toggleAlert();
+//   setTimeout(() => {
+//     toggleAlert();
+//   }, 3000);
+// }; -->

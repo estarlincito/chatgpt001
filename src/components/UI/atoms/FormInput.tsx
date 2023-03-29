@@ -1,12 +1,17 @@
-import { FieldValues } from "react-hook-form";
-const FormInput = ({ register }: FieldValues) => {
+"use client";
+import { useForm } from "@/Hooks";
+
+const FormInput = () => {
+  const { question, onChange } = useForm();
   return (
     <input
       autoFocus
       required
+      maxLength={1000}
+      onChange={onChange}
+      value={question}
       placeholder="Escribe aquí"
-      className="bg-primary text-quaternary font-light border-none outline-none py-3 pl-5 pr-6 rounded-bl-lg text-base col-span-7"
-      {...register("question", { required: true, maxLength: 1000 })}
+      className="col-span-7 py-3 pl-5 pr-6 text-base font-light border-none rounded-bl-lg outline-none bg-primary text-quaternary"
     />
   );
 };

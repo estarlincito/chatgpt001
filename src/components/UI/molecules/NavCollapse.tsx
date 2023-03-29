@@ -1,5 +1,5 @@
 "use client";
-import { useAppContext } from "@/context";
+import { useToggle } from "@/Hooks";
 import {
   NavCollapseAlert,
   NavCollapseDeleteBtn,
@@ -8,13 +8,13 @@ import {
 } from "@UI/atoms";
 
 const NavCollapse = () => {
-  const { collapse } = useAppContext();
+  const { collapse } = useToggle();
 
   return (
     <>
       {collapse === true ? (
         <div className="z-40">
-          <div className="grid grid-flow-row-dense h-96 w-4/5 mt-10 p-4 absolute  bg-primary left-0 rounded-br-lg">
+          <div className="absolute left-0 grid w-4/5 grid-flow-row-dense p-4 mt-10 rounded-br-lg h-96 bg-primary">
             <NavCollapseHeader />
             <NavCollapseDeleteBtn />
             <NavCollapseAlert />

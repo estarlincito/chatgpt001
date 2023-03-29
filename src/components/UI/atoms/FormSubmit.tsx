@@ -1,14 +1,15 @@
-import { useAppContext } from "@/context";
+"use client";
+import { useForm } from "@/Hooks";
 import { IoChevronForwardCircleSharp } from "react-icons/io5";
 
 const FormSubmit = () => {
-  const { question } = useAppContext();
+  const { question } = useForm();
   return (
     <>
       {question === "" ? (
         <span className="select-none" />
       ) : (
-        <button className="text-quinary pt-2 font-bold text-xl border-none select-none cursor-pointer col-span-1">
+        <button className="col-span-1 pt-2 text-xl font-bold border-none cursor-pointer select-none text-quinary">
           <IoChevronForwardCircleSharp />
         </button>
       )}

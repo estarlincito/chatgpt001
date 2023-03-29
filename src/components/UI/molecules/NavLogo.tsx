@@ -3,7 +3,7 @@ import { NavIcon, NavName } from "@UI/atoms";
 
 const NavLogo = () => {
   return (
-    <Link href="/" className="col-start-4 grid grid-cols-2 items-center">
+    <Link href="/" className="grid items-center grid-cols-2 col-start-4">
       <NavIcon />
       <NavName />
     </Link>

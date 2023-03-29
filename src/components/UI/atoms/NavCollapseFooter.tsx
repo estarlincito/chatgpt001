@@ -29,7 +29,7 @@ const Author = () => {
 
 const NavCollapseFooter = () => {
   return (
-    <footer className="text-xs flex justify-center">
+    <footer className="flex justify-center text-xs">
       <Copyright />
       <Author />
     </footer>

@@ -1,22 +1,18 @@
 "use client";
-import { useAppContext } from "@/context";
+import { useToggle } from "@/Hooks";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const NavMenu = () => {
-  const { collapse, setCollapse } = useAppContext();
-  const handleClick = () => {
-    const statu = collapse === false ? true : false;
-    setCollapse(statu);
-  };
+  const { collapse, toggleCollapse } = useToggle();
 
   return (
-    <button className="col-start-1" onClick={handleClick}>
+    <button className="col-start-1" onClick={toggleCollapse}>
       {collapse === false ? (
-        <i className="text-slate-50 duration-500 text-lg font-bold hover:text-slate-300 active:text-slate-600">
+        <i className="text-lg font-bold duration-500 text-slate-50 hover:text-slate-300 active:text-slate-600">
           <AiOutlineMenu />
         </i>
       ) : (
-        <i className="text-slate-50 duration-500 text-lg font-bold hover:text-slate-300 active:text-slate-600">
+        <i className="text-lg font-bold duration-500 text-slate-50 hover:text-slate-300 active:text-slate-600">
           <AiOutlineClose />
         </i>
       )}
