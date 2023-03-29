@@ -8,7 +8,7 @@ import { Chat } from "@/types";
 const MainChat = () => {
   const devRef = useRef<HTMLDivElement>(null);
   const { chat } = useChat();
-  const { collapse, toggleCollapse } = useToggle();
+  const { collapse, offCollapse } = useToggle();
 
   //to scroll down
   useEffect(() => {
@@ -20,10 +20,10 @@ const MainChat = () => {
 
   return (
     <div
-      onClick={toggleCollapse}
+      onClick={offCollapse}
       ref={devRef}
       className={clsx("bg-primary p-5 h-[82%] overflow-auto", {
-        // "opacity-60": collapse === true,
+        "text-slate-50": collapse == true,
       })}
     >
       {chat.map((_chat: Chat) => (
