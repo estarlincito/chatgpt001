@@ -23,7 +23,7 @@ const MainChat = () => {
       onClick={toggleCollapse}
       ref={devRef}
       className={clsx("bg-primary p-5 h-[82%] overflow-auto", {
-        "opacity-60": collapse === true,
+        // "opacity-60": collapse === true,
       })}
     >
       {chat.map((_chat: Chat) => (
