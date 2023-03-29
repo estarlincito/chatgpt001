@@ -15,3 +15,6 @@ export { default as ChatCardDate } from "./ChatCardDate";
 //Form
 export { default as FormSubmit } from "./FormSubmit";
 export { default as FormInput } from "./FormInput";
+
+//Opacity
+export { default as Opacity } from "./Opacity";

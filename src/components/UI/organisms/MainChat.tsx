@@ -1,5 +1,4 @@
 "use client";
-import clsx from "clsx";
 import { ChatCard, ChatCardLoadding } from "@UI/molecules";
 import { useEffect, useRef } from "react";
 import { useChat, useToggle } from "@/Hooks";
@@ -8,7 +7,7 @@ import { Chat } from "@/types";
 const MainChat = () => {
   const devRef = useRef<HTMLDivElement>(null);
   const { chat } = useChat();
-  const { collapse, offCollapse } = useToggle();
+  const { offCollapse } = useToggle();
 
   //to scroll down
   useEffect(() => {
@@ -22,9 +21,7 @@ const MainChat = () => {
     <div
       onClick={offCollapse}
       ref={devRef}
-      className={clsx("bg-primary p-5 h-[82%] overflow-auto", {
-        "text-slate-50": collapse == true,
-      })}
+      className="p-5 h-[80%] overflow-auto"
     >
       {chat.map((_chat: Chat) => (
         <div key={_chat.id} className="grid items-center">
