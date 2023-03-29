@@ -9,7 +9,7 @@ const FormSubmit = () => {
       {question === "" ? (
         <span className="select-none" />
       ) : (
-        <button className="col-span-1 pt-2 text-xl font-bold border-none cursor-pointer select-none text-quinary">
+        <button className="col-span-1 ml-2 text-xl font-bold border-none cursor-pointer select-none text-quinary">
           <IoChevronForwardCircleSharp />
         </button>
       )}

@@ -1,13 +1,13 @@
 "use client";
 import { ChatCard, ChatCardLoadding } from "@UI/molecules";
 import { useEffect, useRef } from "react";
-import { useChat, useToggle } from "@/Hooks";
+import { useChat } from "@/Hooks";
 import { Chat } from "@/types";
+import { Opacity } from "@UI/atoms";
 
 const MainChat = () => {
   const devRef = useRef<HTMLDivElement>(null);
   const { chat } = useChat();
-  const { offCollapse } = useToggle();
 
   //to scroll down
   useEffect(() => {
@@ -18,11 +18,8 @@ const MainChat = () => {
   }, [chat]);
 
   return (
-    <div
-      onClick={offCollapse}
-      ref={devRef}
-      className="p-5 h-[80%] overflow-auto"
-    >
+    <div ref={devRef} className="p-5 overflow-scroll">
+      <Opacity />
       {chat.map((_chat: Chat) => (
         <div key={_chat.id} className="grid items-center">
           {_chat.human === undefined ? null : (

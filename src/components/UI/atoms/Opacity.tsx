@@ -8,7 +8,7 @@ const Opacity = () => {
       {collapse ? (
         <div
           onClick={offCollapse}
-          className="fixed w-96 md:w-[500px] h-[63%]  my-auto bg-primary opacity-60 z-30"
+          className="fixed left-0 right-0 z-30 top-16 bg-primary h-4/5 opacity-60"
         ></div>
       ) : null}
     </>
