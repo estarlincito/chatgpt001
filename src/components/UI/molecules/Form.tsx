@@ -10,7 +10,7 @@ const Form = () => {
     <form
       onClick={offCollapse}
       onSubmit={onSubmit}
-      className="grid h-16 grid-cols-8 border-t border-t-tertiary border-opacity-30"
+      className="grid h-16 grid-cols-8 row-start-6 border-t border-t-tertiary border-opacity-30"
     >
       <FormInput />
       <FormSubmit />

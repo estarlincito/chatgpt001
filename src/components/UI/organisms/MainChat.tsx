@@ -1,13 +1,13 @@
 "use client";
-import { ChatCard, ChatCardLoadding } from "@UI/molecules";
 import { useEffect, useRef } from "react";
-import { useChat } from "@/Hooks";
-import { Chat } from "@/types";
-import { Opacity } from "@UI/atoms";
+import { useChat, useToggle } from "@/Hooks";
+import { ChatHistory } from "../molecules";
+import clsx from "clsx";
 
 const MainChat = () => {
   const devRef = useRef<HTMLDivElement>(null);
   const { chat } = useChat();
+  const { collapse, offCollapse } = useToggle();
 
   //to scroll down
   useEffect(() => {
@@ -18,29 +18,14 @@ const MainChat = () => {
   }, [chat]);
 
   return (
-    <div ref={devRef} className="p-5 overflow-scroll">
-      <Opacity />
-      {chat.map((_chat: Chat) => (
-        <div key={_chat.id} className="grid items-center">
-          {_chat.human === undefined ? null : (
-            <ChatCard
-              type="human"
-              header={_chat.human.question}
-              date={_chat.human.date}
-            />
-          )}
-
-          {_chat.bot === undefined ? (
-            <ChatCardLoadding />
-          ) : (
-            <ChatCard
-              type="bot"
-              header={_chat.bot.answer}
-              date={_chat.bot.date}
-            />
-          )}
-        </div>
-      ))}
+    <div
+      ref={devRef}
+      onClick={offCollapse}
+      className={clsx("h-[500px] p-5 overflow-scroll scroll-smooth", {
+        "opacity-60": collapse === true,
+      })}
+    >
+      <ChatHistory />
     </div>
   );
 };
