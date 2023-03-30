@@ -5,7 +5,7 @@ import { ChatProvider, FormProvider } from "@/context";
 const MainContainer = () => {
   return (
     <main className="container grid h-screen mx-auto place-items-center">
-      <div className="drop-shadow-lg md:w-[628px] bg-primary h-[628px] rounded-lg w-96  duration-500">
+      <div className="shadow-2xl md:w-[628px] bg-primary h-[628px] rounded-lg w-96  duration-500">
         <ChatProvider>
           <Nav />
           <MainChat />

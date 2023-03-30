@@ -14,7 +14,7 @@ const NavCollapse = () => {
     <>
       {collapse === true ? (
         <div className="z-40">
-          <div className="absolute left-0 grid w-4/5 grid-flow-row-dense p-4 border-b border-r rounded-br-lg mt-11 h-[50vh] min-h-[200px] bg-primary border-b-tertiary drop-shadow-md border-r-tertiary border-opacity-30">
+          <div className="absolute left-0 grid w-4/5 grid-flow-row-dense p-4 border-b border-r rounded-br-lg mt-11 h-[50vh] min-h-[200px] bg-primary border-b-tertiary border-r-tertiary border-opacity-30">
             <NavCollapseHeader />
             <NavCollapseDeleteBtn />
             <NavCollapseAlert />
