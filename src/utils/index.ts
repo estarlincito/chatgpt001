@@ -1,3 +1,3 @@
-export { currentTimer } from "./currentTimer";
+export { currentTimer } from "./current-timer";
 export { initialChat } from "./initialChat";
-export { botAnswer } from "./botAnswer";
+export { botAnswer } from "./bot-answer";

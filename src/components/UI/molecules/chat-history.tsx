@@ -1,7 +1,7 @@
 import { useChat } from "@/Hooks";
 import { Chat } from "@/types";
-import ChatCard from "./ChatCard";
-import ChatCardLoadding from "./ChatCardLoadding";
+import ChatCard from "./chat-card";
+import ChatCardLoadding from "./chat-card-loadding";
 
 const ChatHistory = () => {
   const { chat } = useChat();

@@ -1,3 +1,3 @@
-export { ChatContext, ChatProvider } from "./ChatContext";
-export { AppContext, AppProvider } from "./AppProvider";
-export { FormContext, FormProvider } from "./FormContext";
+export { ChatContext, ChatProvider } from "./chat-context";
+export { AppContext, AppProvider } from "./app-context";
+export { FormContext, FormProvider } from "./form-context";

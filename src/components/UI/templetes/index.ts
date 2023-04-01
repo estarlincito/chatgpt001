@@ -1,1 +1,1 @@
-export { default } from "./MainContainer";
+export { default } from "./main-container";

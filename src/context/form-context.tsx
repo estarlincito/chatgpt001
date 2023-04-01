@@ -1,13 +1,12 @@
 "use client";
 import { createContext, ReactNode, useState } from "react";
 
-//Types
+//Create Context
 interface Context {
   question: string;
   setQuestion: (question: string) => void;
 }
 
-//Create Context
 export const FormContext = createContext({} as Context);
 
 //Set Provider

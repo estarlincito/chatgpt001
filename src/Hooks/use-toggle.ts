@@ -2,7 +2,7 @@
 import { AppContext } from "@/context";
 import { initialChat } from "@/utils";
 import { useContext } from "react";
-import { useChat } from "./useChat";
+import { useChat } from "./use-chat";
 
 export const useToggle = () => {
   try {

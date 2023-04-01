@@ -1,17 +1,17 @@
 //Nav
-export { default as NavIcon } from "./NavIcon";
-export { default as NavMenu } from "./NavMenu";
-export { default as NavName } from "./NavName";
+export { default as NavIcon } from "./nav-icon";
+export { default as NavMenu } from "./nav-menu";
+export { default as NavName } from "./nav-name";
 //NavCollapse
-export { default as NavCollapseDeleteBtn } from "./NavCollapseDeleteBtn";
-export { default as NavCollapseHeader } from "./NavCollapseHeader";
-export { default as NavCollapseFooter } from "./NavCollapseFooter";
-export { default as NavCollapseAlert } from "./NavCollapseAlert";
+export { default as NavCollapseDeleteBtn } from "./nav-collapse-delete-btn";
+export { default as NavCollapseHeader } from "./nav-collapse-header";
+export { default as NavCollapseFooter } from "./nav-collapse-footer";
+export { default as NavCollapseAlert } from "./nav-collapse-alert";
 
 //MainChat
-export { default as ChatCardHeader } from "./ChatCardHeader";
-export { default as ChatCardDate } from "./ChatCardDate";
+export { default as ChatCardHeader } from "./chat-card-header";
+export { default as ChatCardDate } from "./chat-card-date";
 
 //Form
-export { default as FormSubmit } from "./FormSubmit";
-export { default as FormInput } from "./FormInput";
+export { default as FormSubmit } from "./form-submit";
+export { default as FormInput } from "./form-input";

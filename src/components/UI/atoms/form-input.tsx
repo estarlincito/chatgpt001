@@ -11,7 +11,7 @@ const FormInput = () => {
       onChange={onChange}
       value={question}
       placeholder="Escribe aquí"
-      className="col-span-7 p-3 text-base font-light border-none rounded-bl-lg outline-none bg-primary text-quaternary"
+      className="col-span-7 p-3 ml-2 text-base font-light border-none rounded-bl-lg outline-none bg-primary text-quaternary"
     />
   );
 };

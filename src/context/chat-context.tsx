@@ -3,13 +3,12 @@ import { Chat } from "@/types";
 import { initialChat } from "@/utils";
 import { createContext, ReactNode, useEffect, useRef, useState } from "react";
 
-//Types
+//Create Context
 interface Context {
   chat: Chat[];
   setChat: (chat: Chat[]) => void;
 }
 
-//Create Context
 export const ChatContext = createContext({} as Context);
 
 //Set Provider

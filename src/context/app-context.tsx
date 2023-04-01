@@ -1,7 +1,7 @@
 "use client";
 import { createContext, ReactNode, useState } from "react";
 
-//Types
+//Create Context
 interface Context {
   collapse: boolean;
   setCollapse: (collapse: boolean) => void;
@@ -10,7 +10,6 @@ interface Context {
   setAlert: (alert: boolean) => void;
 }
 
-//Create Context
 export const AppContext = createContext({} as Context);
 
 //Set Provider
