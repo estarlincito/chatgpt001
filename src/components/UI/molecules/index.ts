@@ -8,4 +8,4 @@ export { default as ChatCardLoadding } from "./chat-card-loadding";
 export { default as ChatHistory } from "./chat-history";
 
 //Form
-export { default as Form } from "./form";
+export { default as Form } from "./chat-form";
