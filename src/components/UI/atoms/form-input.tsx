@@ -1,5 +1,5 @@
-"use client";
-import { useForm } from "@/Hooks";
+'use client';
+import { useForm } from '@/Hooks';
 
 const FormInput = () => {
   const { question, onChange } = useForm();
@@ -10,8 +10,8 @@ const FormInput = () => {
       maxLength={1000}
       onChange={onChange}
       value={question}
-      placeholder="Escribe aquí"
-      className="col-span-7 p-3 ml-2 text-base font-light border-none rounded-bl-lg outline-none bg-primary text-quaternary"
+      placeholder='Escribe aquí'
+      className='col-span-7 p-3 ml-2 text-base font-light border-none rounded-bl-lg outline-none bg-primary text-quaternary'
     />
   );
 };

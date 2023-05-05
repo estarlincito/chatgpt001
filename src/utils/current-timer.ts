@@ -3,5 +3,5 @@ export const currentTimer = () => {
   const hour = date.getHours();
   const minute = date.getMinutes();
 
-  return `${hour <= 9 ? "0" : ""}${hour}:${minute <= 9 ? "0" : ""}${minute}`;
+  return `${hour <= 9 ? '0' : ''}${hour}:${minute <= 9 ? '0' : ''}${minute}`;
 };

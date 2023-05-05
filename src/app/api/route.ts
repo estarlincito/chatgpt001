@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";
-import { botAnswer } from "@/utils";
+import { botAnswer } from '@/utils';
+import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   const { question } = await request.json();

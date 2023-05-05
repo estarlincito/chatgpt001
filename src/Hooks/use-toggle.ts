@@ -1,8 +1,8 @@
-"use client";
-import { AppContext } from "@/context";
-import { initialChat } from "@/utils";
-import { useContext } from "react";
-import { useChat } from "./use-chat";
+'use client';
+import { AppContext } from '@/context';
+import { initialChat } from '@/utils';
+import { useContext } from 'react';
+import { useChat } from './use-chat';
 
 export const useToggle = () => {
   try {
@@ -37,6 +37,6 @@ export const useToggle = () => {
       togglrCollapse,
     };
   } catch (error) {
-    throw new Error("useChat must be used within a ChatContext");
+    throw new Error('useChat must be used within a ChatContext');
   }
 };

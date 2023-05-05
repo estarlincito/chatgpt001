@@ -1,8 +1,8 @@
-"use client";
-import { useEffect, useRef } from "react";
-import { useChat, useToggle } from "@/Hooks";
-import { ChatHistory } from "../molecules";
-import clsx from "clsx";
+'use client';
+import { useChat, useToggle } from '@/Hooks';
+import clsx from 'clsx';
+import { useEffect, useRef } from 'react';
+import { ChatHistory } from '../molecules';
 
 const MainChat = () => {
   const devRef = useRef<HTMLDivElement>(null);
@@ -13,7 +13,7 @@ const MainChat = () => {
   useEffect(() => {
     devRef.current?.scrollTo({
       top: devRef.current?.scrollHeight,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }, [chat]);
 
@@ -21,8 +21,8 @@ const MainChat = () => {
     <div
       ref={devRef}
       onClick={offCollapse}
-      className={clsx("h-[500px] p-5 overflow-scroll scroll-smooth", {
-        "opacity-60": collapse === true,
+      className={clsx('h-[500px] p-5 overflow-scroll scroll-smooth', {
+        'opacity-60': collapse === true,
       })}
     >
       <ChatHistory />

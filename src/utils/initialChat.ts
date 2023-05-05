@@ -1,4 +1,4 @@
-import { currentTimer } from "./current-timer";
+import { currentTimer } from './current-timer';
 
 export const initialChat = [
   {

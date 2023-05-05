@@ -1,7 +1,7 @@
-"use client";
-import { Chat } from "@/types";
-import { initialChat } from "@/utils";
-import { createContext, ReactNode, useEffect, useRef, useState } from "react";
+'use client';
+import { Chat } from '@/types';
+import { initialChat } from '@/utils';
+import { createContext, ReactNode, useEffect, useRef, useState } from 'react';
 
 //Create Context
 interface Context {
@@ -18,10 +18,10 @@ export const ChatProvider = ({ children }: { children: ReactNode }) => {
 
   //whent app start
   useEffect(() => {
-    const lsChat = localStorage.getItem("chat");
+    const lsChat = localStorage.getItem('chat');
 
     if (lsChat === null) {
-      localStorage.setItem("chat", JSON.stringify(initialChat));
+      localStorage.setItem('chat', JSON.stringify(initialChat));
       setChat(initialChat);
     } else {
       setChat(JSON.parse(lsChat));
@@ -34,7 +34,7 @@ export const ChatProvider = ({ children }: { children: ReactNode }) => {
       appRender.current += 1;
       return;
     }
-    localStorage.setItem("chat", JSON.stringify(chat));
+    localStorage.setItem('chat', JSON.stringify(chat));
   }, [chat]);
 
   return (

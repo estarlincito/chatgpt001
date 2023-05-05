@@ -1,4 +1,4 @@
-import MainContainer from "@UI/templetes";
+import MainContainer from '@UI/templetes';
 
 const HomePage = () => {
   return <MainContainer />;

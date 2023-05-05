@@ -1,6 +1,6 @@
 const ChatCardLoadding = () => {
   return (
-    <div className="loadding">
+    <div className='loadding'>
       <span></span>
       <span></span>
       <span></span>

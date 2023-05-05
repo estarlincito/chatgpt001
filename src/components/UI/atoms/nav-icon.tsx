@@ -1,4 +1,4 @@
-import { GiRobotHelmet } from "react-icons/gi";
+import { GiRobotHelmet } from 'react-icons/gi';
 
 const NavIcon = () => {
   return (

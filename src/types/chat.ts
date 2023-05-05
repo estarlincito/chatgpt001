@@ -1,5 +1,5 @@
-import { Bot } from "./bot";
-import { Human } from "./human";
+import { Bot } from './bot';
+import { Human } from './human';
 
 export type Chat = {
   id: number;

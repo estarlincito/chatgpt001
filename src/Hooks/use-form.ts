@@ -1,8 +1,8 @@
-"use client";
-import { ChatContext, FormContext } from "@/context";
-import { Chat } from "@/types";
-import { currentTimer } from "@/utils";
-import { ChangeEvent, useContext } from "react";
+'use client';
+import { ChatContext, FormContext } from '@/context';
+import { Chat } from '@/types';
+import { currentTimer } from '@/utils';
+import { ChangeEvent, useContext } from 'react';
 
 //Types
 type FormEvent = ChangeEvent<HTMLInputElement>;
@@ -25,14 +25,14 @@ export const useForm = () => {
       };
 
       // //reset form
-      setQuestion("");
+      setQuestion('');
 
       //set Human Question
       setChat([...chat, _chat]);
 
       //Get Answer from server
-      const res = await fetch("/api", {
-        method: "POST",
+      const res = await fetch('/api', {
+        method: 'POST',
         body: JSON.stringify({
           question: _chat.human?.question,
         }),
@@ -53,7 +53,7 @@ export const useForm = () => {
     return { question, onChange, onSubmit };
   } catch (error) {
     throw new Error(
-      "useForm must be used within a FormContext or useForm must be used within a ChatContext"
+      'useForm must be used within a FormContext or useForm must be used within a ChatContext'
     );
   }
 };
