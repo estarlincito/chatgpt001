@@ -1,11 +1,9 @@
 'use client';
-import { useToggle } from '@/Hooks';
-import {
-  NavCollapseAlert,
-  NavCollapseDeleteBtn,
-  NavCollapseFooter,
-  NavCollapseHeader,
-} from '@UI/atoms';
+import useToggle from '@/Hooks/use-toggle';
+import NavCollapseAlert from '@UI/atoms/nav-collapse-alert';
+import NavCollapseDeleteBtn from '@UI/atoms/nav-collapse-delete-btn';
+import NavCollapseFooter from '@UI/atoms/nav-collapse-footer';
+import NavCollapseHeader from '@UI/atoms/nav-collapse-header';
 
 const NavCollapse = () => {
   const { collapse } = useToggle();

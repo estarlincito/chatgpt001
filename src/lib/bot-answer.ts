@@ -1,7 +1,8 @@
 import { Configuration, OpenAIApi } from 'openai';
+import isEnv from './is-env';
 
 const configuration = new Configuration({
-  apiKey: process.env.NEXT_PUBLIC_KEY,
+  apiKey: isEnv(process.env.NEXT_PUBLIC_KEY as string),
 });
 
 const openai = new OpenAIApi(configuration);
@@ -22,3 +23,5 @@ export const botAnswer = async (input: string) => {
 
   return { answer: data.choices[0].text };
 };
+
+export default botAnswer;

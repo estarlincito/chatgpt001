@@ -1,5 +1,5 @@
 'use client';
-import { useToggle } from '@/Hooks';
+import useToggle from '@/Hooks/use-toggle';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
 
 const NavCollapseAlert = () => {

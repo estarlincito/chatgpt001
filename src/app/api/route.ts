@@ -1,4 +1,4 @@
-import { botAnswer } from '@/utils';
+import { botAnswer } from '@/lib/bot-answer';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {

@@ -1,5 +1,5 @@
 'use client';
-import { useToggle } from '@/Hooks';
+import useToggle from '@/Hooks/use-toggle';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const NavMenu = () => {

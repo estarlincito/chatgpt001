@@ -1,4 +1,4 @@
-import { AppProvider } from '@/context';
+import { AppProvider } from '@/context/app-context';
 import '@/styles/globals.css';
 
 export const metadata = {
@@ -29,9 +29,9 @@ export const metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='es'>
-      <AppProvider>
-        <body className='bg-secondary'>{children}</body>
-      </AppProvider>
+      <body className='bg-secondary'>
+        <AppProvider>{children}</AppProvider>
+      </body>
     </html>
   );
 };

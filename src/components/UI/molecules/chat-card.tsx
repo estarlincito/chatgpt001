@@ -1,4 +1,5 @@
-import { ChatCardDate, ChatCardHeader } from '@UI/atoms';
+import ChatCardDate from '@UI/atoms/chat-card-date';
+import ChatCardHeader from '@UI/atoms/chat-card-header';
 import clsx from 'clsx';
 
 type props = {

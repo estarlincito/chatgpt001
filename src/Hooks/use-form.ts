@@ -1,13 +1,14 @@
 'use client';
-import { ChatContext, FormContext } from '@/context';
-import { Chat } from '@/types';
-import { currentTimer } from '@/utils';
+import { ChatContext } from '@/context/chat-context';
+import { FormContext } from '@/context/form-context';
+import currentTimer from '@/lib/current-timer';
+import { Chat } from '@/types/chat';
 import { ChangeEvent, useContext } from 'react';
 
 //Types
 type FormEvent = ChangeEvent<HTMLInputElement>;
 //Use Context
-export const useForm = () => {
+const useForm = () => {
   try {
     const { question, setQuestion } = useContext(FormContext);
     const { chat, setChat } = useContext(ChatContext);
@@ -57,3 +58,5 @@ export const useForm = () => {
     );
   }
 };
+
+export default useForm;

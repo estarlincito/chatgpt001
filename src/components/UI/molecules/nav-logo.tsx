@@ -1,4 +1,5 @@
-import { NavIcon, NavName } from '@UI/atoms';
+import NavIcon from '@UI/atoms/nav-icon';
+import NavName from '@UI/atoms/nav-name';
 import Link from 'next/link';
 
 const NavLogo = () => {

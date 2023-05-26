@@ -1,5 +1,6 @@
-import { NavMenu } from '@UI/atoms';
-import { NavCollapse, NavLogo } from '@UI/molecules';
+import NavMenu from '@UI/atoms/nav-menu';
+import NavCollapse from '@UI/molecules/nav-collapse';
+import NavLogo from '@UI/molecules/nav-logo';
 
 const Nav = () => {
   return (

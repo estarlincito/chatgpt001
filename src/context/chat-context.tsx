@@ -1,6 +1,6 @@
 'use client';
-import { Chat } from '@/types';
-import { initialChat } from '@/utils';
+import initialChat from '@/lib/initialChat';
+import { Chat } from '@/types/chat';
 import { createContext, ReactNode, useEffect, useRef, useState } from 'react';
 
 //Create Context

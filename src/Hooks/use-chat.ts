@@ -1,8 +1,9 @@
 'use client';
-import { ChatContext } from '@/context';
+
+import { ChatContext } from '@/context/chat-context';
 import { useContext } from 'react';
 
-export const useChat = () => {
+const useChat = () => {
   try {
     const context = useContext(ChatContext);
     return context;
@@ -10,3 +11,5 @@ export const useChat = () => {
     throw new Error('useChat must be used within a ChatContext');
   }
 };
+
+export default useChat;

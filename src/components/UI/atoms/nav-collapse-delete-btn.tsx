@@ -1,5 +1,6 @@
 'use client';
-import { useChat, useToggle } from '@/Hooks';
+import useChat from '@/Hooks/use-chat';
+import useToggle from '@/Hooks/use-toggle';
 import { AiTwotoneDelete } from 'react-icons/ai';
 
 const NavCollapseDeleteBtn = () => {

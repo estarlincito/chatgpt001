@@ -1,9 +1,9 @@
 const ChatCardLoadding = () => {
   return (
     <div className='loadding'>
-      <span></span>
-      <span></span>
-      <span></span>
+      {[1, 2, 3].map((item, id) => (
+        <span key={id}></span>
+      ))}
     </div>
   );
 };

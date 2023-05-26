@@ -1,5 +1,5 @@
 'use client';
-import { useForm } from '@/Hooks';
+import useForm from '@/Hooks/use-form';
 
 const FormInput = () => {
   const { question, onChange } = useForm();

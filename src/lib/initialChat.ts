@@ -1,6 +1,6 @@
-import { currentTimer } from './current-timer';
+import currentTimer from './current-timer';
 
-export const initialChat = [
+const initialChat = [
   {
     id: 0,
     bot: {
@@ -9,3 +9,5 @@ export const initialChat = [
     },
   },
 ];
+
+export default initialChat;

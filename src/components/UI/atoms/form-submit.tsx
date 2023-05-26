@@ -1,5 +1,5 @@
 'use client';
-import { useForm } from '@/Hooks';
+import useForm from '@/Hooks/use-form';
 import { IoChevronForwardCircleSharp } from 'react-icons/io5';
 
 const FormSubmit = () => {

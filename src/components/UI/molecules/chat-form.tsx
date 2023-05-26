@@ -1,8 +1,10 @@
 'use client';
-import { useForm, useToggle } from '@/Hooks';
-import { FormInput, FormSubmit } from '@UI/atoms';
+import useForm from '@/Hooks/use-form';
+import useToggle from '@/Hooks/use-toggle';
+import FormInput from '@UI/atoms/form-input';
+import FormSubmit from '@UI/atoms/form-submit';
 
-const Form = () => {
+const ChatForm = () => {
   const { onSubmit } = useForm();
   const { offCollapse } = useToggle();
 
@@ -18,4 +20,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ChatForm;

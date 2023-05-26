@@ -1,4 +1,3 @@
-import '@/styles/globals.css';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -8,7 +7,7 @@ const NotFounPage = () => {
       <Head>
         <title>Página no encontrada</title>
       </Head>
-      ˝
+
       <main className='grid justify-center items-center h-[90vh]'>
         <div>
           <h3 className='text-3xl'>Lo sentimos…</h3>
