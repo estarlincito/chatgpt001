@@ -29,7 +29,7 @@ export const metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='es'>
-      <body className='bg-secondary'>
+      <body className='bg-white'>
         <AppProvider>{children}</AppProvider>
       </body>
     </html>
