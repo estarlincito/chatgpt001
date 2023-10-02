@@ -6,7 +6,7 @@ const HomePage = () => {
       {/* <Chatgpt001 /> */}
 
       <p>
-        This project is closed because now I'm using this:&apos;
+        This project is closed because now I'm using this:&lsquo;
         <Link
           href='https://estarlincito.com/gpt'
           className='text-black font-bold'
