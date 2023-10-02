@@ -1,7 +1,9 @@
+import Link from 'next/link';
+
 const HomePage = () => {
   return (
     <main className='container grid h-screen mx-auto place-items-center md:p-5'>
-      {/* <p>
+      <p>
         This project is closed because now I'm using this:&apos;
         <Link
           href='https://estarlincito.com/gpt'
@@ -9,7 +11,7 @@ const HomePage = () => {
         >
           estarlincito.com/gpt
         </Link>
-      </p> */}
+      </p>
     </main>
   );
 };
