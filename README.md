@@ -1,6 +1,6 @@
 # Welcome to chatGPT001
 
-## This project is closed because now I'm using this: [estarlincito/gpt.com](https://estarlincito/gpt.com)
+## This project is closed because now I'm using this: [estarlincito.com/gpt](https://estarlincito.com/gpt)
 
 ChatGPT (Chat Generative Pre-trained Transformer) is a chatbot
 developed by OpenAI and launched in November 2022. It is built on
